@@ -266,6 +266,15 @@ void render()
 	//Draw box.
 	glPushMatrix();
 	glColor3ub(150, 160, 220);
+
+
+        if (g.pos[0] == (g.xres - g.w)) {
+		glColor3ub(220, 50, 50);
+        }
+        if (g.pos[0] <= g.w) {
+                glColor3ub(220, 50, 50);
+	}
+
 	glTranslatef(g.pos[0], g.pos[1], 0.0f);
 	glBegin(GL_QUADS);
 		glVertex2f(-g.w, -g.w);
